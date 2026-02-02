@@ -1,87 +1,46 @@
-# AI Cyber Awareness & Incident Triage Agent
-
-## Overview
-
-Cybersecurity incidents impact real people — not just companies.
-
-Non-technical users, students, and small organizations are increasingly exposed to digital threats, yet most security tools are designed for experts. As a result, critical incidents are often misunderstood, ignored, or escalated too late.
-
-This project addresses that gap by transforming complex cybersecurity signals into clear, understandable incidents that help users decide **when they should worry and take action** — and when they should not panic.
-
----
+# Should I Worry? — An AI Cyber Awareness Assistant
 
 ## Problem
+Cybersecurity incidents affect real people — not just companies.
 
-Most cybersecurity platforms assume technical expertise.
-
-For non-technical users, this creates:
-- Confusion about what is happening  
-- Fear caused by unclear alerts  
-- Inaction or delayed response to real threats  
-
-Vulnerable users are left without accessible tools to understand risk severity or make informed decisions.
-
----
+Non-technical users, students, and small organizations are exposed to digital threats every day, but most security tools are built for experts. This creates a gap where **critical incidents are misunderstood, ignored, or escalated too late**, while harmless alerts can cause unnecessary panic.
 
 ## Solution
+**Should I Worry?** is an AI-assisted cyber awareness & incident triage assistant that turns confusing security signals into **clear, understandable severity levels**.
 
-The **AI Cyber Awareness & Incident Triage Agent** is an AI-assisted cybersecurity awareness tool designed to make security events understandable and actionable for non-technical users.
-
-Instead of complex dashboards, the agent:
-- Translates cybersecurity events into clear severity levels  
-- Highlights critical incidents that require attention  
-- Keeps lower-risk events informational  
-
-The focus is **awareness, education, and clarity** — not enterprise complexity.
-
----
+It simulates real-world cyber events, automatically classifies them by severity, and visualizes them in a simple way so anyone can understand:
+- when to act
+- when to stay calm
+- what type of incident they might be facing
 
 ## How It Works
-
-- Simulates real-world cybersecurity incidents  
-  (e.g., unauthorized access, system warnings, outages)
-
-- Automatically classifies events by severity  
-  (`info`, `warning`, `critical`)
-
-- Sends structured events to Elasticsearch in real time
-
-- Visualizes events and correlated security cases using Elastic Security
-
----
+1. **Cyber events are generated** (simulated incidents such as unauthorized access, outages, warnings).
+2. **AI-style severity classification** labels events as:
+   - Info
+   - Warning
+   - Critical
+3. Events are sent to **Elasticsearch** as structured documents.
+4. Results can be explored in **Discover**, and critical signals can be correlated into **Elastic Security Cases**.
 
 ## Why It Matters
+Cyber awareness should be accessible. This project focuses on **clarity, education, and visibility** — empowering people who are usually left out of cybersecurity tools.
 
-Cybersecurity awareness should not be limited to large organizations.
-
-Accessible tools empower:
-- Individuals  
-- Students  
-- Small teams  
-
-to understand digital risks and make informed decisions without needing expert-level security knowledge.
-
-This project demonstrates how AI can reduce fear and confusion by transforming complex signals into meaningful, human-readable insights.
-
----
-
-## Technology Stack
-
-- Python  
-- Elastic Cloud  
-- Elasticsearch  
-- Elastic Security  
-
----
+## Tech Stack
+- Python
+- Elastic Cloud / Elasticsearch
+- Elastic Security (Cases)
+- Kibana (Discover)
 
 ## Status
-
 ✅ Working prototype with real-time event generation and visualization.
 
----
-
 ## Demo
+- Video: (add your Devpost/YouTube link here)
+- Repo: (this repository)
 
-📺 Video demonstration available (see project submission on Devpost).
-
-📦 Source code available in this repository.
+## Run Locally
+1. Create a virtual environment and install dependencies:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # macOS/Linux
+   pip install -r requirements.txt
